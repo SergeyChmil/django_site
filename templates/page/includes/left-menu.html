@@ -1,0 +1,10 @@
+{% load staticfiles %}
+<div id="leftmenu">
+    <ul>
+        {% for cat in cats %}
+{#            <li><a href="/goods/{{ cat.id }}/">{{ cat.name }}</a></li>#}
+{#            "index" это ссылка на контроллер index в views.py#}
+            <li><a href="{% url "index" cat_id=cat.id %}">{{ cat.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

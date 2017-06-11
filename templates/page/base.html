@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <link type="text/css" href="{% static "main.css" %}" rel="stylesheet">
+    <title>{% block title %}{% endblock %} :: Всё для уборки</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Список товаров</h1>
+    </div>
+
+    {% include "page/includes/left-menu.html" %}
+
+    <div id="main">
+        {% block main %}
+        {% endblock %}
+    </div>
+    <div id="footer">
+        <p>Все права принадлежат разработчикам.</p>
+    </div>
+</body>
+</html>
